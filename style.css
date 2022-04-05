@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.questions {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center; 
+ margin-top: 2vh;
+ height: 30vh;
+ width: 90vw;
+ background-color: aliceblue;
+ padding: 40px;
+ margin-left: 5vw;
+};
+
+
+.starting {
+    background-color: red;
+};
+
+button:hover {
+    background-color: goldenrod
+};
+
+.hidden {
+    display: hidden;
+    list-style: none;
+}
+
+
+
+
+
+
+
+
+.card {
+    padding: 10px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#resultsTimer {
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+
+#resultsName {
+    margin-left: 1vw;
+}
+
+#resultsLabel {
+    margin-left: 2vw;
+}
