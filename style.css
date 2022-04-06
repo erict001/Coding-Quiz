@@ -3,7 +3,7 @@
 }
 
 
-.questions {
+.container {
  display: flex;
  flex-direction: column;
  justify-content: space-evenly;
@@ -17,8 +17,8 @@
 };
 
 
-.starting {
-    background-color: red;
+ #startButton {
+    font-size: 20px;
 };
 
 button:hover {
@@ -30,7 +30,24 @@ button:hover {
     list-style: none;
 }
 
+#question {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
 
+.choice-containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; 
+    margin-top: 2vh;
+    height: 30vh;
+    width: 90vw;
+    background-color: aliceblue;
+    padding: 40px;
+    margin-left: 5vw;
+   };
 
 
 
