@@ -100,6 +100,7 @@ function startQuestion1() {
     timeLeft =-10
     startQuestion2();
   }
+}; 
 
 startEl.addEventListener("click", startQuestion1)
 
@@ -182,6 +183,4 @@ function answerQuestion4 () {
 for (let i = 13; i < 16; i++) {
   var clickButton = answers[i]
   // answer.addEventListener("click", answerQuestion1)
-}
-
-}
+};
