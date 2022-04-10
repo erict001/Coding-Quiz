@@ -9,33 +9,51 @@
 </head>
 <body>
 
-    <section>
-        <h3 id="starting"></h3>
-        <a href="./results.html" id="resultsBtn"><h3>View High Scores</h3></a>
+    <header>
+        <div>
+            <h3 id="starting"></h3>
+        </div>
+        <div>
+            <a href="./results.html" id="resultsBtn"><h3>View High Scores</h3></a>
+        </div>
+    </header>
+    <!-- <section class="container" id="home"> -->
+    <section class="container" id="Title">
+        <div id="contentTitle" class="content-box">
+            <h1 id="title-text">Italian Food Quiz</h1>
+            <p id="box-text">In this coding quiz, you will test your knowledge of Italian food facts.</p>
+            <button id="startButton">Begin</button>
+        </div>
+        <div id="question1" class="hide">
+            <h2>What year was the first pizza made?</h2>
+            <button class="btn" id="btn1">1902</button>
+            <button class="btn" id="btn2">1899</button>
+            <button class="btn" id="btn3">1836</button>
+            <button class="btn" id="btn4">1789</button>
+        </div>    
+        <div id="question2" class="hide">
+            <h2>'Foccacia' is a type of what?</h2>
+            <button class="btn" id="btn5">Bread</button>
+            <button class="btn" id="btn6">Meat</button>
+            <button class="btn" id="btn7">Cheese</button>
+            <button class="btn" id="btn8">Pasta</button>
+        </div>   
+        <div id="question3" class="hide">
+            <h2>Which of the following is not an ingredient of pesto?</h2>
+            <button class="btn" id="btn9">Parmesan cheese</button>
+            <button class="btn" id="btn10">Meat</button>
+            <button class="btn" id="btn11">Cheese</button>
+            <button class="btn" id="btn12">Pasta</button>
+        </div>   
+        <div  class="hide" id="question4">
+            <h2>What does 'tiramisu' mean?</h2>
+            <button class="btn" id="btn13">Pick me up</button>
+            <button class="btn" id="btn14">Wake me up</button>
+            <button class="btn" id="btn15">Shake me up</button>
+            <button class="btn" id="btn16">Bake me up</button> -->
+        </div>   
     </section>
-    <section class="container" id="home">
-        <h1>Italian Food Quiz</h1>
-        <p>In this coding quiz, you will test your knowledge of Italian food facts.</p>
-        <button id="startButton">Begin</button>
-    </section>
-    <div id="question">What year was the first pizza made?</div>
-    <div class="choice-containers">
-        <p class="choice-prefix">A</p>
-        <p class="choice-text" data-number="1">1902</p>
-    </div>
-    <div class="choice-containers">
-        <p class="choice-prefix">B</p>
-        <p class="choice-text" data-number="2">1899</p>
-    </div>
-    <div class="choice-containers">
-        <p class="choice-prefix">C</p>
-        <p class="choice-text" data-number="3">1836</p>
-    </div>
-    <div class="choice-containers">
-        <p class="choice-prefix">D</p>
-        <p class="choice-text" data-number="4">1789</p>
-    </div>
-
+    <!-- </section> -->
     <script src="./script.js"></script>
     
 </body>
