@@ -18,7 +18,7 @@
         </div>
     </header>
     <!-- <section class="container" id="home"> -->
-    <section class="container" id="Title">
+    <section class="container" id="home">
         <div id="contentTitle" class="content-box">
             <h1 id="title-text">Italian Food Quiz</h1>
             <p id="box-text">In this coding quiz, you will test your knowledge of Italian food facts.</p>
@@ -41,7 +41,7 @@
         <div id="question3" class="hide">
             <h2>Which of the following is not an ingredient of pesto?</h2>
             <button class="btn" id="btn9">Parmesan cheese</button>
-            <button class="btn" id="btn10">Meat</button>
+            <button class="btn" id="btn10">Basil</button>
             <button class="btn" id="btn11">Cheese</button>
             <button class="btn" id="btn12">Pasta</button>
         </div>   
@@ -52,9 +52,17 @@
             <button class="btn" id="btn15">Shake me up</button>
             <button class="btn" id="btn16">Bake me up</button> -->
         </div>   
+        <div  class="hide" id="results">
+            <h2>Results</h2>
+            <h3 id="timeRemaining"></h3>
+            <label for="">Enter your initials:</label>
+            <input type="text" id="initials">
+            <a href="./results.html"><button id="submit">Submit</button></a>
+        </div>
     </section>
     <!-- </section> -->
     <script src="./script.js"></script>
+    <script src="./results.js"></script>
     
 </body>
 </html>
