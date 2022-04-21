@@ -9,17 +9,22 @@ var quizContent = document.getElementById("quiz-content")
 var contextBox = document.getElementsByClassName("content-box")
 var results = document.getElementById("results")
 var resultsText = document.getElementById("timeRemaining")
+var initials = document.getElementById("initials")
+var initialsText = initials.value
 
 // var questionsDiv = document.querySelector("questions")
 var answers = document.querySelectorAll(".btn")
 
 var hideContainer = document.querySelector("container")
 
+//final scores array
+var scoresArray = []
+
 // User = click button for game to start
 //timer starts when the button is clicked
  // Timer 
   //timer starts at 60s
- timeLeft = 20;
+ timeLeft = 60;
 
  function countdown() {
        //when the button is clicked, the timer will start
@@ -51,19 +56,19 @@ function startQuestion1() {
   //display question1
   document.querySelector("#question1").classList.remove("hide");
 
-  var answeredQuestion = function(){
+  var answeredQuestion1 = function(){
     if (this.id == "btn2"){
       console.log("Correct")
-      startQuestion2
+      startQuestion2()
     } else {
       console.log("Wrong")
       timeLeft -= 10;
-      startQuestion2
+      startQuestion2()
     }
   }
   for (let i = 0; i < 4; i++) {
     let answer = answers[i]
-    answer.addEventListener("click", answeredQuestion)
+    answer.addEventListener("click", answeredQuestion1)
   }
   }; 
 
@@ -80,19 +85,19 @@ function startQuestion2() {
   //display question1
   document.querySelector("#question2").classList.remove("hide");
 
-  var answeredQuestion = function(){
-    if (this.id == "btn2"){
+  var answeredQuestion2 = function(){
+    if (this.id == "btn5"){
       console.log("Correct")
-      startQuestion2
+      startQuestion3()
     } else {
       console.log("Wrong")
       timeLeft -= 10;
-      startQuestion2
+      startQuestion3()
     }
   }
   for (let i = 5; i < 8; i++) {
     let answer = answers[i]
-    answer.addEventListener("click", answeredQuestion)
+    answer.addEventListener("click", answeredQuestion2)
   }
 }; 
 
@@ -104,10 +109,19 @@ function startQuestion3() {
   //display question1
   document.querySelector("#question3").classList.remove("hide");
 
-  if (document.getElementById("btn9").onclick = startQuestion4) {
-  } else {
-    timeLeft -= 10;
-    startQuestion4();
+  var answeredQuestion3 = function(){
+    if (this.id == "btn10"){
+      console.log("Correct")
+      startQuestion4()
+    } else {
+      console.log("Wrong")
+      timeLeft -= 10;
+      startQuestion4()
+    }
+  }
+  for (let i = 9; i < 12; i++) {
+    let answer = answers[i]
+    answer.addEventListener("click", answeredQuestion3)
   }
 }; 
 
@@ -118,15 +132,21 @@ function startQuestion4() {
   //display question1
   document.querySelector("#question4").classList.remove("hide");
 
-  if (document.getElementById("btn15").onclick = endGame) {
-    console.log("Correct");
-  } else {
-    console.log("Wrong");
-    timeLeft -= 10;
-    clearInterval(timeInterval);
-    endGame();
+  var answeredQuestion4 = function(){
+    if (this.id == "btn15"){
+      console.log("Correct")
+      endGame()
+    } else {
+      console.log("Wrong")
+      timeLeft -= 10;
+      endGame()
+    }
   }
-}; 
+  for (let i = 13; i < 16; i++) {
+    let answer = answers[i]
+    answer.addEventListener("click", answeredQuestion4)
+  }
+  }; 
 
 function endGame() {
   //hide this block
@@ -137,11 +157,12 @@ function endGame() {
   //display question1
   document.querySelector("#results").classList.remove("hide");
 
-  if (timeLeft = 0) {
+  if (timeLeft === 0) {
     resultsText.textContent = "Your final score is 0";
   } else {
     resultsText.textContent = "Your final score is " + timeLeft;
-    clearInterval(timeInterval);
   }
 
+  scoresArray.push(initialsText + ":" + timeLeft)
+  localStorage.setItem("scores", JSON.stringify(scoresArray))
 };
