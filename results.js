@@ -1,29 +1,30 @@
-// Jamie Morris Homework-4 Code Quiz 
-// Declared variables
-var highScore = document.querySelector("#highScore");
-var clear = document.querySelector("#clear");
-var goBack = document.querySelector("#goBack");
+var storedScores = JSON.parse(localStorage.getItem("scores"));
+var highScoresArea = document.querySelector("#highScoresList");
+var backBtn = document.querySelector("#backButton");
+var clearBtn = document.querySelector("#clearScores");
 
-// Event listener to clear scores 
-clear.addEventListener("click", function () {
-    localStorage.clear();
-    location.reload();
-});
-// Retreives local stroage 
-var allScores = localStorage.getItem("allScores");
-allScores = JSON.parse(allScores);
-
-if (allScores !== null) {
-
-    for (var i = 0; i < allScores.length; i++) {
-
-        var createLi = document.createElement("li");
-        createLi.textContent = allScores[i].initials + " " + allScores[i].score;
-        highScore.appendChild(createLi);
-
+function displayScores() {
+    if (storedScores !== null) {
+        var scoreList = document.createElement("ol");
+        scoreList.className = "scoreListClass";
+        for (var i = 0; i < storedScores.length; i++) {
+            var innerText = storedScores[i];
+            var scoreEntry = document.createElement("li");
+            scoreEntry.innerHTML = innerText;
+            scoreList.appendChild(scoreEntry);
+        }
+        highScoresArea.appendChild(scoreList);
     }
-}
-// Event listener to move to index page
-goBack.addEventListener("click", function () {
-    window.location.replace("./index.html");
+};
+
+displayScores();
+
+backBtn.addEventListener("click", function () {
+    location.href = "index.html";
 });
+
+// clearBtn.addEventListener("click", function () {
+//     highScoresArea.innerHTML = "";
+//     window.localStorage.clear();
+
+// });
