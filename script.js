@@ -178,4 +178,5 @@ submitBtn.addEventListener("click", function(){
   console.log(initialsText)
   scoresArray.push(initialsText + ":" + timeLeft)
   localStorage.setItem("scores", JSON.stringify(scoresArray))
+  location.replace("./results.html")
 })
