@@ -9,16 +9,22 @@ var quizContent = document.getElementById("quiz-content")
 var contextBox = document.getElementsByClassName("content-box")
 var results = document.getElementById("results")
 var resultsText = document.getElementById("timeRemaining")
-var initials = document.getElementById("initials")
-var initialsText = initials.value
+var submitBtn = document.getElementById("submit")
 
 // var questionsDiv = document.querySelector("questions")
 var answers = document.querySelectorAll(".btn")
 
 var hideContainer = document.querySelector("container")
 
+var highScores = JSON.parse(localStorage.getItem("scores"))
+
+if (highScores) {
+  var scoresArray = highScores
+} else {
+  var scoresArray = []
+}
+
 //final scores array
-var scoresArray = []
 
 // User = click button for game to start
 //timer starts when the button is clicked
@@ -162,7 +168,14 @@ function endGame() {
   } else {
     resultsText.textContent = "Your final score is " + timeLeft;
   }
+  // console.log("initialsText", initialsText)
 
+};
+
+submitBtn.addEventListener("click", function(){
+  var initials = document.getElementById("initials")
+  var initialsText = initials.value
+  console.log(initialsText)
   scoresArray.push(initialsText + ":" + timeLeft)
   localStorage.setItem("scores", JSON.stringify(scoresArray))
-};
+})
