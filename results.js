@@ -23,8 +23,8 @@ backBtn.addEventListener("click", function () {
     location.href = "index.html";
 });
 
-// clearBtn.addEventListener("click", function () {
-//     highScoresArea.innerHTML = "";
-//     window.localStorage.clear();
+clearBtn.addEventListener("click", function () {
+    highScoresArea.innerHTML = "";
+    window.localStorage.clear();
 
-// });
+});

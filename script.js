@@ -101,7 +101,7 @@ function startQuestion2() {
       startQuestion3()
     }
   }
-  for (let i = 5; i < 8; i++) {
+  for (let i = 4; i < 8; i++) {
     let answer = answers[i]
     answer.addEventListener("click", answeredQuestion2)
   }
@@ -125,7 +125,7 @@ function startQuestion3() {
       startQuestion4()
     }
   }
-  for (let i = 9; i < 12; i++) {
+  for (let i = 8; i < 12; i++) {
     let answer = answers[i]
     answer.addEventListener("click", answeredQuestion3)
   }
@@ -148,7 +148,7 @@ function startQuestion4() {
       endGame()
     }
   }
-  for (let i = 13; i < 16; i++) {
+  for (let i = 12; i < 16; i++) {
     let answer = answers[i]
     answer.addEventListener("click", answeredQuestion4)
   }
@@ -162,7 +162,6 @@ function endGame() {
   document.querySelector("#question4").classList.add("hide");
   //display question1
   document.querySelector("#results").classList.remove("hide");
-
   if (timeLeft === 0) {
     resultsText.textContent = "Your final score is 0";
   } else {
