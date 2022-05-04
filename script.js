@@ -132,27 +132,27 @@ function startQuestion3() {
 }; 
 
 // Question4!!!!
-function startQuestion4() {
-  //hide this block
+function startQuestion4() { 
+  // hide this block
   document.querySelector("#question3").classList.add("hide");
-  //display question1
+  // display question1
   document.querySelector("#question4").classList.remove("hide");
 
-  var answeredQuestion4 = function(){
-    if (this.id == "btn15"){
-      console.log("Correct")
-      endGame()
-    } else {
-      console.log("Wrong")
-      timeLeft -= 10;
-      endGame()
-    }
+  var answeredQuestion4 = function () {
+      if (this.id == "btn15") {
+          console.log("Correct")
+          endGame()
+      } else {
+          console.log("Wrong")
+          timeLeft -= 10;
+          endGame()
+      }
   }
   for (let i = 12; i < 16; i++) {
-    let answer = answers[i]
-    answer.addEventListener("click", answeredQuestion4)
+      let answer = answers[i]
+      answer.addEventListener("click", answeredQuestion4)
   }
-  }; 
+};
 
 function endGame() {
   //hide this block
